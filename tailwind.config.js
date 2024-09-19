@@ -9,6 +9,7 @@ export default {
       },
       boxShadow: {
         normal: '0px 5px 5px 0px #eeeeee',
+        regular: '0px 0px 5px 0px #eeeeee',
       },
     },
   },
