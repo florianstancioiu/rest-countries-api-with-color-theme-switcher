@@ -24,6 +24,7 @@ const Home = () => {
       <div>
         {countries.map((country) => (
           <Country
+            key={country.name}
             title={country.name}
             flag={country.flag}
             population={country.population}

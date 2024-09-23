@@ -7,15 +7,15 @@ const Dropdown = () => {
         viewBox='0 -4.5 24 24'
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'
-        xmlns:xlink='http://www.w3.org/1999/xlink'
+        xmlnsXlink='http://www.w3.org/1999/xlink'
         xmlns:sketch='http://www.bohemiancoding.com/sketch/ns'
         fill='#000000'
       >
-        <g id='SVGRepo_bgCarrier' stroke-width='0'></g>
+        <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
         <g
           id='SVGRepo_tracerCarrier'
-          stroke-linecap='round'
-          stroke-linejoin='round'
+          strokeLinecap='round'
+          strokeLinejoin='round'
         ></g>
         <g id='SVGRepo_iconCarrier'>
           <title>chevron-down</title> <desc>Created with Sketch Beta.</desc>{' '}
@@ -23,9 +23,9 @@ const Dropdown = () => {
           <g
             id='Page-1'
             stroke='none'
-            stroke-width='1'
+            strokeWidth='1'
             fill='none'
-            fill-rule='evenodd'
+            fillRule='evenodd'
             sketch:type='MSPage'
           >
             <g
