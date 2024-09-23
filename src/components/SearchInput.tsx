@@ -1,4 +1,4 @@
-const SearchInput = () => {
+const SearchInput = ({ keyword, onChange }) => {
   return (
     <div className='relative bg-white shadow-regular mb-[5rem]'>
       <svg
@@ -24,6 +24,8 @@ const SearchInput = () => {
         </g>
       </svg>
       <input
+        value={keyword}
+        onChange={onChange}
         className='h-[95px] w-full pl-[9.375rem]'
         type='text'
         placeholder='Search for a country...'
