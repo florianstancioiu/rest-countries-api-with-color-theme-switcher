@@ -19,7 +19,6 @@ const Dropdown = ({ value, options, onChange }) => {
           version='1.1'
           xmlns='http://www.w3.org/2000/svg'
           xmlnsXlink='http://www.w3.org/1999/xlink'
-          xmlns:sketch='http://www.bohemiancoding.com/sketch/ns'
           fill='#000000'
         >
           <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
