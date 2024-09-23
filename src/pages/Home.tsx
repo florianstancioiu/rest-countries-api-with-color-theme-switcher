@@ -18,10 +18,12 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='px-[1.875rem] pt-[2.813rem]'>
-      <SearchInput />
-      <Dropdown />
-      <div>
+    <>
+      <div className='px-[1.875rem] pt-[2.813rem]'>
+        <SearchInput />
+        <Dropdown />
+      </div>
+      <div className='px-[7rem]'>
         {countries.map((country) => (
           <Country
             key={country.name}
@@ -33,7 +35,7 @@ const Home = () => {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
