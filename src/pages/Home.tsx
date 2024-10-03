@@ -28,45 +28,50 @@ const regions = [
 
 const Home = () => {
   const [countries, setCountries] = useState([]);
+  const [filteredCountries, setFilteredCountries] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState('');
   const [region, setRegion] = useState('');
 
   useEffect(() => {
     const fetchCountries = async () => {
       const response = await fetch(`data.json`);
-      const result = await response.json();
+      const countries = await response.json();
 
-      const filteredResults = result
-        .filter((item) => {
-          if (searchKeyword === '') {
-            return true;
-          }
-
-          if (
-            item.name.toLowerCase().includes(searchKeyword.trim().toLowerCase())
-          ) {
-            return true;
-          } else {
-            return false;
-          }
-        })
-        .filter((item) => {
-          if (region === '') {
-            return true;
-          }
-
-          if (item.region.toLowerCase() === region.name.toLowerCase()) {
-            return true;
-          }
-
-          return false;
-        });
-
-      setCountries(filteredResults);
+      setCountries(countries);
     };
 
     fetchCountries();
-  }, [searchKeyword, region]);
+  }, []);
+
+  useEffect(() => {
+    const filteredResults = countries
+      .filter((item) => {
+        if (searchKeyword === '') {
+          return true;
+        }
+
+        if (
+          item.name.toLowerCase().includes(searchKeyword.trim().toLowerCase())
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      })
+      .filter((item) => {
+        if (region === '') {
+          return true;
+        }
+
+        if (item.region.toLowerCase() === region.name.toLowerCase()) {
+          return true;
+        }
+
+        return false;
+      });
+
+    setFilteredCountries(filteredResults);
+  }, [searchKeyword, region, countries]);
 
   const handleSearchInputChange = (event) => {
     setSearchKeyword(event.target.value);
@@ -90,7 +95,7 @@ const Home = () => {
         />
       </div>
       <div className='px-[7rem]'>
-        {countries.map((country) => (
+        {filteredCountries.map((country) => (
           <Country
             key={country.name}
             title={country.name}
