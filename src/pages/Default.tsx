@@ -3,7 +3,7 @@ import Header from '../components/Header';
 
 const Default = () => {
   return (
-    <div className='bg-light-white h-[100%]'>
+    <div className='bg-light-white dark:bg-dark-bg-two'>
       <Header />
       <Outlet />
     </div>

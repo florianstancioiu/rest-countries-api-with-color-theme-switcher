@@ -1,6 +1,6 @@
 const Country = ({ title, flag, population, region, capital }) => {
   return (
-    <div className='mb-[5rem] bg-white rounded overflow-hidden shadow-normal'>
+    <div className='mb-[5rem] bg-white dark:bg-dark-bg-one dark:text-dark-white rounded overflow-hidden shadow-normal dark:shadow-dark-normal'>
       <div className=''>
         <img className='w-full' src={flag} alt={`${title} flag`} />
       </div>

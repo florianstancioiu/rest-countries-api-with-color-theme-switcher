@@ -14,6 +14,8 @@ export default {
       boxShadow: {
         normal: '0px 5px 5px 0px #eeeeee',
         regular: '0px 0px 5px 0px #eeeeee',
+        'dark-normal': '0px 5px 5px 0px #2b3743',
+        'dark-regular': '0px 0px 5px 0px #202d36',
       },
     },
   },
