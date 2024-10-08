@@ -56,7 +56,7 @@ const Dropdown = ({ value, options, onChange }) => {
           !isOpen ? 'hidden' : ''
         }`}
       >
-        {options.map((option, index: number) => {
+        {options.map((option) => {
           return (
             <p
               className={`px-[3rem] h-[3.375rem] flex items-center`}

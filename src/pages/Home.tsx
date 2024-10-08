@@ -24,13 +24,17 @@ const regions = [
     name: 'Oceania',
     id: 5,
   },
+  {
+    name: 'All',
+    id: 6,
+  },
 ];
 
 const Home = () => {
   const [countries, setCountries] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState('');
-  const [region, setRegion] = useState('');
+  const [region, setRegion] = useState(regions[5]);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -59,7 +63,7 @@ const Home = () => {
         }
       })
       .filter((item) => {
-        if (region === '') {
+        if (region.name === 'All') {
           return true;
         }
 
