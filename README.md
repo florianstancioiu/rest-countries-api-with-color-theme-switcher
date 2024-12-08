@@ -99,10 +99,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [https://medium.com/@praizjosh/how-to-import-svg-files-as-react-components-in-vite-97d6e1f2c046](How to import SVG files as React Components in Vite App) - This helped me with SVGs
+- [https://stackoverflow.com/a/75232649/12159189](Change svg color with vite-plugin-svgr) - I learned how to make the SVGs follow the color given for them in CSS
 
 ## Author
 
