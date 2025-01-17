@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
-const Country = ({ title, flag, population, region, capital }) => {
+const Country = ({ alpha3Code, title, flag, population, region, capital }) => {
   return (
     <Link
-      to={title}
+      to={alpha3Code}
       className='mb-[5rem] bg-white dark:bg-dark-bg-one dark:text-dark-white rounded overflow-hidden shadow-normal dark:shadow-dark-normal'
     >
       <div className=''>

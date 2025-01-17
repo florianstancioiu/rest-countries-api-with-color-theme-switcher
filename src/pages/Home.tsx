@@ -101,6 +101,7 @@ const Home = () => {
       <div className='px-[7rem]'>
         {filteredCountries.map((country) => (
           <Country
+            alpha3Code={country.alpha3Code}
             key={country.name}
             title={country.name}
             flag={country.flag}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Button from '../components/UI/Button';
 import Back from '../svgs/back.svg?react';
 
@@ -13,7 +13,7 @@ const Country = () => {
       const countries = await response.json();
 
       const filteredCountries = countries.filter(
-        (country) => country.name === countryParam
+        (country) => country.alpha3Code === countryParam
       );
 
       if (filteredCountries.length === 1) {
@@ -25,13 +25,15 @@ const Country = () => {
   }, [countryParam]);
 
   return (
-    <div className='px-[1.875rem]'>
-      <Button className='mt-[80px]'>
-        <Back /> Back
-      </Button>
+    <div className='px-[1.875rem] pt-[80px]'>
+      <Link to={'/'}>
+        <Button className='mb-[125px] flex gap-x-[20px] justify-between items-center'>
+          <Back className='w-[33px] h-[22px]' /> <span>Back</span>
+        </Button>
+      </Link>
       {country && (
         <div>
-          <div>
+          <div className='mb-[100px]'>
             <img
               className='w-full'
               src={country.flag}
@@ -39,7 +41,7 @@ const Country = () => {
             />
           </div>
           <div>
-            <h3>{country.name}</h3>
+            <h3 className='mb-[68px]'>{country.name}</h3>
             <div>
               <p>
                 <strong>Native Name: </strong> {country.nativeName}
@@ -67,6 +69,18 @@ const Country = () => {
               <p>
                 <strong>Language: </strong> {country.nativeName}
               </p>
+            </div>
+          </div>
+          <div>
+            <p className='mb-[40px]'>
+              <strong>Border Countries: </strong>
+            </p>
+            <div className='flex gap-[18px]'>
+              {country.borders.map((borderCountry, index) => (
+                <Link to={`/${borderCountry}`} key={index}>
+                  <Button>{borderCountry}</Button>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
