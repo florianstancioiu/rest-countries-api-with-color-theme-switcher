@@ -1,40 +1,46 @@
-import { useEffect, useState } from 'react';
-import Country from '../components/Country';
-import Dropdown from '../components/Dropdown';
-import SearchInput from '../components/SearchInput';
+import { useEffect, useState } from "react";
+import Country from "../components/Country";
+import Dropdown from "../components/Dropdown";
+import SearchInput from "../components/SearchInput";
+import { type Country as CountryType } from "../components/Country";
 
-const regions = [
+export type Region = {
+  id: number;
+  name: string;
+};
+
+const regions: Region[] = [
   {
-    name: 'Africa',
+    name: "Africa",
     id: 1,
   },
   {
-    name: 'Americas',
+    name: "Americas",
     id: 2,
   },
   {
-    name: 'Asia',
+    name: "Asia",
     id: 3,
   },
   {
-    name: 'Europe',
+    name: "Europe",
     id: 4,
   },
   {
-    name: 'Oceania',
+    name: "Oceania",
     id: 5,
   },
   {
-    name: 'All',
+    name: "All",
     id: 6,
   },
 ];
 
 const Home = () => {
-  const [countries, setCountries] = useState([]);
-  const [filteredCountries, setFilteredCountries] = useState([]);
-  const [searchKeyword, setSearchKeyword] = useState('');
-  const [region, setRegion] = useState(regions[5]);
+  const [countries, setCountries] = useState<CountryType[]>([]);
+  const [filteredCountries, setFilteredCountries] = useState<CountryType[]>([]);
+  const [searchKeyword, setSearchKeyword] = useState<string>("");
+  const [region, setRegion] = useState<Region>(regions[5]);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -50,12 +56,12 @@ const Home = () => {
   useEffect(() => {
     const filteredResults = countries
       .filter((item) => {
-        if (searchKeyword === '') {
+        if (searchKeyword === "") {
           return true;
         }
 
         if (
-          item.name.toLowerCase().includes(searchKeyword.trim().toLowerCase())
+          item.name!.toLowerCase().includes(searchKeyword.trim().toLowerCase())
         ) {
           return true;
         } else {
@@ -63,7 +69,7 @@ const Home = () => {
         }
       })
       .filter((item) => {
-        if (region.name === 'All') {
+        if (region.name === "All") {
           return true;
         }
 
@@ -77,17 +83,19 @@ const Home = () => {
     setFilteredCountries(filteredResults);
   }, [searchKeyword, region, countries]);
 
-  const handleSearchInputChange = (event) => {
+  const handleSearchInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setSearchKeyword(event.target.value);
   };
 
-  const handleRegionChange = (value) => {
+  const handleRegionChange = (value: Region) => {
     setRegion(value);
   };
 
   return (
     <>
-      <div className='px-[1.875rem] pt-[2.813rem]'>
+      <div className="px-[1.875rem] pt-[2.813rem]">
         <SearchInput
           keyword={searchKeyword}
           onChange={handleSearchInputChange}
@@ -98,12 +106,12 @@ const Home = () => {
           onChange={handleRegionChange}
         />
       </div>
-      <div className='px-[7rem]'>
+      <div className="px-[7rem]">
         {filteredCountries.map((country) => (
           <Country
             alpha3Code={country.alpha3Code}
             key={country.name}
-            title={country.name}
+            name={country.name}
             flag={country.flag}
             population={country.population}
             region={country.region}
