@@ -27,7 +27,7 @@ const Country = () => {
   }, [countryParam]);
 
   return (
-    <div className="px-[1.875rem] pt-[80px]">
+    <div className="fm:w-[1282px] fm:mx-auto px-[1.875rem] pt-[80px]">
       <Link className="inline-block" to={"/"}>
         <Button className="mb-[125px] flex gap-x-[20px] justify-between items-center">
           <Back fill="currentColor" className="w-[33px] h-[22px]" />{" "}
@@ -35,68 +35,74 @@ const Country = () => {
         </Button>
       </Link>
       {country && (
-        <div className="pb-[120px]">
-          <div className="mb-[100px]">
+        <div className="pb-[120px] fm:flex fm:justify-between fm:items-center fm:gap-x-[142px]">
+          <div className="mb-[100px] fm:w-[560px]">
             <img
-              className="w-full"
+              className="w-full fm:h-[400px] fm:object-cover"
               src={country.flag}
               alt={`${country.name} flag`}
             />
           </div>
-          <div className="dark:text-dark-white">
-            <h3 className="mb-[60px] font-bold text-[40px]">{country.name}</h3>
-            <div className="mb-[100px]">
-              <p className="mb-[40px]">
-                <strong>Native Name: </strong> {country.nativeName}
-              </p>
-              <p className="mb-[40px]">
-                <strong>Population: </strong> {country.population}
-              </p>
-              <p className="mb-[40px]">
-                <strong>Region: </strong> {country.region}
-              </p>
-              <p className="mb-[40px]">
-                <strong>Sub Region: </strong> {country.subregion}
-              </p>
-              <p className="mb-[40px]">
-                <strong>Capital: </strong> {country.capital}
-              </p>
-            </div>
-            <div>
-              <p className="mb-[40px]">
-                <strong>Top Level Domain: </strong> {country.topLevelDomain}
-              </p>
-              <p className="mb-[40px]">
-                <strong>Currencies: </strong>
-                {country.currencies!.map((currency) => (
-                  <span key={currency.code}>{currency.name}</span>
-                ))}
-              </p>
-              <p className="mb-[40px]">
-                <strong>Language: </strong>
-                {country.languages!.map((language, index: number) => (
-                  <span key={language.iso639_2}>
-                    {language.name}
-                    {index !== country.languages!.length - 1 ? ", " : ""}
-                  </span>
-                ))}
-              </p>
-            </div>
-          </div>
-          {country.borders !== undefined && (
-            <div className="dark:text-dark-white">
-              <p className="mb-[40px] text-[28px] font-medium">
-                Border Countries:
-              </p>
-              <div className="grid grid-cols-3 gap-[18px]">
-                {country.borders.map((borderCountry, index) => (
-                  <Link to={`/${borderCountry}`} key={index}>
-                    <Button>{borderCountry}</Button>
-                  </Link>
-                ))}
+          <div>
+            <div className="dark:text-dark-white fm:flex fm:justify-between fm:items-center">
+              <div>
+                <h3 className="mb-[60px] font-bold text-[40px] fm:mb-[40px]">
+                  {country.name}
+                </h3>
+                <div className="mb-[100px]">
+                  <p className="mb-[40px] fm:mb-[20px]">
+                    <strong>Native Name: </strong> {country.nativeName}
+                  </p>
+                  <p className="mb-[40px] fm:mb-[20px]">
+                    <strong>Population: </strong> {country.population}
+                  </p>
+                  <p className="mb-[40px] fm:mb-[20px]">
+                    <strong>Region: </strong> {country.region}
+                  </p>
+                  <p className="mb-[40px] fm:mb-[20px]">
+                    <strong>Sub Region: </strong> {country.subregion}
+                  </p>
+                  <p className="mb-[40px] fm:mb-[20px]">
+                    <strong>Capital: </strong> {country.capital}
+                  </p>
+                </div>
+              </div>
+              <div>
+                <p className="mb-[40px] fm:mb-[20px]">
+                  <strong>Top Level Domain: </strong> {country.topLevelDomain}
+                </p>
+                <p className="mb-[40px] fm:mb-[20px]">
+                  <strong>Currencies: </strong>
+                  {country.currencies!.map((currency) => (
+                    <span key={currency.code}>{currency.name}</span>
+                  ))}
+                </p>
+                <p className="mb-[40px] fm:mb-[20px]">
+                  <strong>Language: </strong>
+                  {country.languages!.map((language, index: number) => (
+                    <span key={language.iso639_2}>
+                      {language.name}
+                      {index !== country.languages!.length - 1 ? ", " : ""}
+                    </span>
+                  ))}
+                </p>
               </div>
             </div>
-          )}
+            {country.borders !== undefined && (
+              <div className="dark:text-dark-white fm:flex fm:justify-between fm:items-start fm:gap-[20px]">
+                <p className="mb-[40px] text-[28px] font-medium fm:text-[16px] fm:mb-0">
+                  Border Countries:
+                </p>
+                <div className="grid grid-cols-3 gap-[18px] fm:grid-cols-4 fm:gap-[8px]">
+                  {country.borders.map((borderCountry, index) => (
+                    <Link to={`/${borderCountry}`} key={index}>
+                      <Button>{borderCountry}</Button>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       )}
     </div>
