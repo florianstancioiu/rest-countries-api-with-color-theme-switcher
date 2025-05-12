@@ -16,7 +16,7 @@ export type Country = {
   subregion?: string;
   currencies?: Currency[];
   languages?: Language[];
-  topLevelDomain: string;
+  topLevelDomain?: string;
   alpha3Code: string;
   name: string;
   flag: string;
