@@ -1,8 +1,22 @@
 import { Link } from "react-router-dom";
 
+export type Currency = {
+  code: string;
+  name: string;
+};
+
+export type Language = {
+  name: string;
+  iso639_2: string;
+};
+
 export type Country = {
   borders?: string[];
   nativeName?: string;
+  subregion?: string;
+  currencies?: Currency[];
+  languages?: Language[];
+  topLevelDomain: string;
   alpha3Code: string;
   name: string;
   flag: string;

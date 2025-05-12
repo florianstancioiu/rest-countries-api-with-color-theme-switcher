@@ -16,7 +16,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -26,7 +25,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 Users should be able to:
 
-- See all countries from the API on the homepage
+- See all countries ~~from the API~~ from the data.json file on the homepage
 - Search for a country using an `input` field
 - Filter countries by region
 - Click on a country to see more detailed information on a separate page
@@ -83,7 +82,7 @@ To see how you can add code snippets, see below:
 
 ```js
 const proudOfThisFunc = () => {
-  console.log('🎉');
+  console.log("🎉");
 };
 ```
 
@@ -105,11 +104,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Author
 
 - Frontend Mentor - [@florianstancioiu](https://www.frontendmentor.io/profile/florianstancioiu)
-- Threads - [@florianstancioiu01](https://www.threads.net/@florianstancioiu01)
-- Youtube - [@florianwebdev](https://www.youtube.com/@florianwebdev)
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Threads - [@florianstancioiu01](https://www.threads.com/@florianstancioiu01)
+- LinkedIn - [@florianstancioiu](https://www.linkedin.com/in/florian-stancioiu-765661349/)
+- freeCodeCamp - [florianstancioiu](https://www.freecodecamp.org/florianstancioiu)

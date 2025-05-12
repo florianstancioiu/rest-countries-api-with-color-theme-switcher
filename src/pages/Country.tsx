@@ -30,7 +30,8 @@ const Country = () => {
     <div className="px-[1.875rem] pt-[80px]">
       <Link to={"/"}>
         <Button className="mb-[125px] flex gap-x-[20px] justify-between items-center">
-          <Back className="w-[33px] h-[22px]" /> <span>Back</span>
+          <Back fill="currentColor" className="w-[33px] h-[22px]" />{" "}
+          <span>Back</span>
         </Button>
       </Link>
       {country && (
@@ -42,42 +43,51 @@ const Country = () => {
               alt={`${country.name} flag`}
             />
           </div>
-          <div>
-            <h3 className="mb-[68px]">{country.name}</h3>
-            <div>
-              <p>
+          <div className="dark:text-dark-white">
+            <h3 className="mb-[60px] font-bold text-[40px]">{country.name}</h3>
+            <div className="mb-[100px]">
+              <p className="mb-[40px]">
                 <strong>Native Name: </strong> {country.nativeName}
               </p>
-              <p>
-                <strong>Population: </strong> {country.nativeName}
+              <p className="mb-[40px]">
+                <strong>Population: </strong> {country.population}
               </p>
-              <p>
-                <strong>Region: </strong> {country.nativeName}
+              <p className="mb-[40px]">
+                <strong>Region: </strong> {country.region}
               </p>
-              <p>
-                <strong>Sub Region: </strong> {country.nativeName}
+              <p className="mb-[40px]">
+                <strong>Sub Region: </strong> {country.subregion}
               </p>
-              <p>
-                <strong>Capital: </strong> {country.nativeName}
+              <p className="mb-[40px]">
+                <strong>Capital: </strong> {country.capital}
               </p>
             </div>
             <div>
-              <p>
-                <strong>Top Level Domain: </strong> {country.nativeName}
+              <p className="mb-[40px]">
+                <strong>Top Level Domain: </strong> {country.topLevelDomain}
               </p>
-              <p>
-                <strong>Currencies: </strong> {country.nativeName}
+              <p className="mb-[40px]">
+                <strong>Currencies: </strong>
+                {country.currencies!.map((currency) => (
+                  <span key={currency.code}>{currency.name}</span>
+                ))}
               </p>
-              <p>
-                <strong>Language: </strong> {country.nativeName}
+              <p className="mb-[40px]">
+                <strong>Language: </strong>
+                {country.languages!.map((language, index: number) => (
+                  <span key={language.iso639_2}>
+                    {language.name}
+                    {index !== country.languages!.length - 1 ? ", " : ""}
+                  </span>
+                ))}
               </p>
             </div>
           </div>
-          <div>
-            <p className="mb-[40px]">
-              <strong>Border Countries: </strong>
+          <div className="pb-[120px] dark:text-dark-white">
+            <p className="mb-[40px] text-[28px] font-medium">
+              Border Countries:
             </p>
-            <div className="flex gap-[18px]">
+            <div className="grid grid-cols-3 gap-[18px]">
               {country.borders!.map((borderCountry, index) => (
                 <Link to={`/${borderCountry}`} key={index}>
                   <Button>{borderCountry}</Button>
