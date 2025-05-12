@@ -14,14 +14,14 @@ const Dropdown = ({ value, options, onChange }: Dropdown) => {
   };
 
   return (
-    <div className="flex items-center w-[25rem] bg-white dark:bg-dark-bg-one dark:text-dark-white shadow-regular dark:shadow-dark-regular cursor-pointer mb-[3.75rem] relative rounded select-none">
+    <div className="fm:w-[200px] flex items-center w-[25rem] bg-white dark:bg-dark-bg-one dark:text-dark-white shadow-regular dark:shadow-dark-regular cursor-pointer mb-[3.75rem] relative rounded select-none">
       <div
-        className="w-full px-[3rem] h-[5.625rem] flex justify-between items-center"
+        className="fm:h-[55px] fm:px-[25px] w-full px-[3rem] h-[5.625rem] flex justify-between items-center"
         onClick={toggleDropdown}
       >
         {value ? <p>{value.name}</p> : <p>Filter by region</p>}
         <svg
-          className={`w-[0.938rem] ${isOpen ? "rotate-180" : ""}`}
+          className={`w-[0.938rem] fm:w-[8px] ${isOpen ? "rotate-180" : ""}`}
           viewBox="0 -4.5 24 24"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const Dropdown = ({ value, options, onChange }: Dropdown) => {
         </svg>
       </div>
       <div
-        className={`bg-white dark:bg-dark-bg-one top-[6.5rem] left-0 absolute w-[25rem] rounded shadow-regular dark:shadow-dark-regular ${
+        className={`fm:top-[59px] bg-white dark:bg-dark-bg-one top-[6.5rem] left-0 absolute w-[25rem] fm:w-[200px] rounded shadow-regular dark:shadow-dark-regular ${
           !isOpen ? "hidden" : ""
         }`}
       >

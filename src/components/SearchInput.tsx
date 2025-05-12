@@ -5,9 +5,9 @@ export type SearchInput = {
 
 const SearchInput = ({ keyword, onChange }: SearchInput) => {
   return (
-    <div className="relative bg-white dark:text-dark-white shadow-regular dark:shadow-dark-regular mb-[5rem]">
+    <div className="fm:min-w-[480px] relative bg-white dark:text-dark-white shadow-regular dark:shadow-dark-regular mb-[5rem]">
       <svg
-        className="absolute left-[66px] top-[50%] translate-y-[-50%] w-[30px] h-[30px]"
+        className="fm:left-[30px] fm:w-[20px] fm:h-[20px] absolute left-[66px] top-[50%] translate-y-[-50%] w-[30px] h-[30px]"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ const SearchInput = ({ keyword, onChange }: SearchInput) => {
       <input
         value={keyword}
         onChange={onChange}
-        className="h-[95px] w-full pl-[9.375rem] dark:bg-dark-bg-one dark:text-dark-white"
+        className="fm:h-[55px] fm:pl-[75px] fm:placeholder:text-white h-[95px] w-full pl-[9.375rem] dark:bg-dark-bg-one dark:text-dark-white"
         type="text"
         placeholder="Search for a country..."
       />

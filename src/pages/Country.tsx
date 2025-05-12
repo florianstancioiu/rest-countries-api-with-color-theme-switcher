@@ -28,14 +28,14 @@ const Country = () => {
 
   return (
     <div className="px-[1.875rem] pt-[80px]">
-      <Link to={"/"}>
+      <Link className="inline-block" to={"/"}>
         <Button className="mb-[125px] flex gap-x-[20px] justify-between items-center">
           <Back fill="currentColor" className="w-[33px] h-[22px]" />{" "}
           <span>Back</span>
         </Button>
       </Link>
       {country && (
-        <div>
+        <div className="pb-[120px]">
           <div className="mb-[100px]">
             <img
               className="w-full"
@@ -83,18 +83,20 @@ const Country = () => {
               </p>
             </div>
           </div>
-          <div className="pb-[120px] dark:text-dark-white">
-            <p className="mb-[40px] text-[28px] font-medium">
-              Border Countries:
-            </p>
-            <div className="grid grid-cols-3 gap-[18px]">
-              {country.borders!.map((borderCountry, index) => (
-                <Link to={`/${borderCountry}`} key={index}>
-                  <Button>{borderCountry}</Button>
-                </Link>
-              ))}
+          {country.borders !== undefined && (
+            <div className="dark:text-dark-white">
+              <p className="mb-[40px] text-[28px] font-medium">
+                Border Countries:
+              </p>
+              <div className="grid grid-cols-3 gap-[18px]">
+                {country.borders.map((borderCountry, index) => (
+                  <Link to={`/${borderCountry}`} key={index}>
+                    <Button>{borderCountry}</Button>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       )}
     </div>

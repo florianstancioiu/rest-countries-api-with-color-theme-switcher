@@ -95,7 +95,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="px-[1.875rem] pt-[2.813rem]">
+      <div className="fm:px-0 px-[1.875rem] pt-[2.813rem] fm:w-[1282px] fm:mx-auto fm:flex fm:justify-between fm:items-center">
         <SearchInput
           keyword={searchKeyword}
           onChange={handleSearchInputChange}
@@ -106,7 +106,7 @@ const Home = () => {
           onChange={handleRegionChange}
         />
       </div>
-      <div className="px-[7rem]">
+      <div className="px-[7rem] fm:w-[1282px] fm:mx-auto fm:grid fm:grid-cols-4 fm:gap-[75px] fm:px-0">
         {filteredCountries.map((country) => (
           <Country
             alpha3Code={country.alpha3Code}
