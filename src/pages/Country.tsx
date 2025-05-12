@@ -27,9 +27,9 @@ const Country = () => {
   }, [countryParam]);
 
   return (
-    <div className="fm:w-[1282px] fm:mx-auto px-[1.875rem] pt-[80px]">
+    <div className="fm:w-[1282px] fm:mx-auto fm:px-0 px-[1.875rem] pt-[80px]">
       <Link className="inline-block" to={"/"}>
-        <Button className="mb-[125px] flex gap-x-[20px] justify-between items-center">
+        <Button className="mb-[125px] flex gap-x-[20px] justify-between items-center fm:mb-[80px]">
           <Back fill="currentColor" className="w-[33px] h-[22px]" />{" "}
           <span>Back</span>
         </Button>
