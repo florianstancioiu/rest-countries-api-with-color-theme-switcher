@@ -2,8 +2,6 @@
 
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-**Note:** I will update this Readme.md file when I will complete the challenge with the stack I choose, untill then, this is just the base template for the Readme file.
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -17,37 +15,27 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
 
 Users should be able to:
 
-- See all countries ~~from the API~~ from the data.json file on the homepage
+- See all countries ~~from the API~~ from the `data.json` file on the homepage
 - Search for a country using an `input` field
 - Filter countries by region
 - Click on a country to see more detailed information on a separate page
 - Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode _(optional)_
+- Toggle the color scheme between light and dark mode
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./screenshot.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://florianstancioiu.github.io/rest-countries-api-with-color-theme-switcher/](https://florianstancioiu.github.io/rest-countries-api-with-color-theme-switcher/)
 
 ## My process
 
@@ -59,51 +47,26 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [TailwindCSS](https://tailwindcss.com/) - For styles
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript superset
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+- I learned how to import SVG files as components in React.
+- I learned how to change the color of certain parts from a SVG file
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- I would change every px value to it's rem counterpart, I started with rems and completed the challenge using pxs.
 
 ### Useful resources
 
-- [https://medium.com/@praizjosh/how-to-import-svg-files-as-react-components-in-vite-97d6e1f2c046](How to import SVG files as React Components in Vite App) - This helped me with SVGs
-- [https://stackoverflow.com/a/75232649/12159189](Change svg color with vite-plugin-svgr) - I learned how to make the SVGs follow the color given for them in CSS
+- [How to import SVG files as React Components in Vite App](https://medium.com/@praizjosh/how-to-import-svg-files-as-react-components-in-vite-97d6e1f2c046) - This helped me with SVGs
+- [Change svg color with vite-plugin-svgr](https://stackoverflow.com/a/75232649/12159189) - I learned how to make the SVGs follow the color given for them in CSS
 
 ## Author
 
 - Frontend Mentor - [@florianstancioiu](https://www.frontendmentor.io/profile/florianstancioiu)
 - Threads - [@florianstancioiu01](https://www.threads.com/@florianstancioiu01)
-- LinkedIn - [@florianstancioiu](https://www.linkedin.com/in/florian-stancioiu-765661349/)
+- LinkedIn - [florianstancioiu](https://www.linkedin.com/in/florian-stancioiu-765661349/)
 - freeCodeCamp - [florianstancioiu](https://www.freecodecamp.org/florianstancioiu)
