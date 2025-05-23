@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher---react-typescript-h1zmSyQzVN](https://www.frontendmentor.io/solutions/rest-countries-api-with-color-theme-switcher---react-typescript-h1zmSyQzVN)
 - Live Site URL: [https://florianstancioiu.github.io/rest-countries-api-with-color-theme-switcher/](https://florianstancioiu.github.io/rest-countries-api-with-color-theme-switcher/)
 
 ## My process
